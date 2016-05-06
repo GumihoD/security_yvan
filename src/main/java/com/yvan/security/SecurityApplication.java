@@ -15,22 +15,22 @@ import javax.sql.DataSource;
 public class SecurityApplication {
 
 
-	@Bean
-	@Primary
-	@ConfigurationProperties(prefix="datasource.mysql")
-	public DataSource dataSourceMysql() {
-		return DataSourceBuilder.create().build();
-	}
-
-	@Bean
-	public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(
-			EntityManagerFactoryBuilder builder) {
-		return builder
-				.dataSource(dataSourceMysql())
-				.packages("com.yvan.**.entity")
-				.persistenceUnit("mysql")
-				.build();
-	}
+//	@Bean
+//	@Primary
+//	@ConfigurationProperties(prefix="datasource.mysql")
+//	public DataSource dataSourceMysql() {
+//		return DataSourceBuilder.create().build();
+//	}
+//
+//	@Bean
+//	public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(
+//			EntityManagerFactoryBuilder builder) {
+//		return builder
+//				.dataSource(dataSourceMysql())
+//				.packages("com.yvan.**.entity")
+//				.persistenceUnit("mysql")
+//				.build();
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SecurityApplication.class, args);

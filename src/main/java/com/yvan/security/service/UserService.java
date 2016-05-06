@@ -15,6 +15,9 @@ public class UserService {
     UserRepository userRepository;
 
     public User findOneUser(long userId) {
+        User user = new User();
+        user.setUserName("qwe");
+        userRepository.save(user);
         return userRepository.findOne(userId);
     }
 }

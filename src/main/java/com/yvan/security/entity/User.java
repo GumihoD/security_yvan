@@ -10,7 +10,7 @@ import javax.persistence.Table;
  * Created by yvan on 16/4/27.
  */
 @Entity
-@Table(name = "user")
+@Table(name = "user",catalog = "security_yvan")
 public class User extends AbstractPersistable<Long>{
     private String userName;
     private String password;
